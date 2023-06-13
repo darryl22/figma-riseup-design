@@ -62,7 +62,7 @@ body{
     background-image: url("./images/background2.png"), url("./images/background3.png");
     background-repeat: no-repeat;
     background-position: right bottom, left bottom;
-    background-size: 40%, 40%;
+    background-size: 35%, 35%;
     aspect-ratio: 1 / 1, 1 / 1;
     background-color: #000005;
     aspect-ratio: 16 / 6;
@@ -91,7 +91,7 @@ body{
     background-image: url("./images/background1.png");
     background-repeat: no-repeat;
     height: 70%;
-    width: 50%;
+    aspect-ratio: 3 / 2;
     background-size: cover;
     margin-right: 130px;
 }
