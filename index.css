@@ -4,6 +4,15 @@ body{
     font-family: 'Inter', sans-serif;
 }
 
+.header-button, .category-button, .nav-button{
+    width: 154px;
+    padding: 10px 0px;
+    color: white;
+    background-color: #006EF2;
+    border-radius: 5px;
+    border: none
+}
+
 .main-nav{
     width: 100%;
     background-color: #0D0D0D;
@@ -42,20 +51,13 @@ body{
     color: #62687C;
 }
 
-.nav-button{
-    padding: 10px 20px;
-    color: white;
-    background-color: #006EF2;
-    border-radius: 5px;
-    border: none
-}
-
 .current-link{
     color: #006EF2;
 }
 
 .nav-button{
     margin-left: 130px;
+    width: 120px;
 }
 
 .header{
@@ -65,14 +67,13 @@ body{
     background-size: 35%, 35%;
     aspect-ratio: 1 / 1, 1 / 1;
     background-color: #000005;
-    aspect-ratio: 16 / 6;
+    /* aspect-ratio: 16 / 6; */
     display: flex;
     align-items: center;
-    padding: 5em 1em;
+    padding: 5em 7em;
 }
 
 .header-content{
-    margin-left: 130px;
     width: 45%;
 }
 
@@ -90,10 +91,10 @@ body{
 .header-image{
     background-image: url("./images/background1.png");
     background-repeat: no-repeat;
-    height: 70%;
-    aspect-ratio: 3 / 2;
+    /* height: 70%; */
+    width: 60%;
+    aspect-ratio: 5 / 3;
     background-size: cover;
-    margin-right: 130px;
 }
 
 .button-container{
@@ -101,11 +102,48 @@ body{
     gap: 1.5em;
 }
 
-.header-button{
-    width: 154px;
-    padding: 10px 0px;
-    color: white;
-    background-color: #006EF2;
-    border-radius: 5px;
-    border: none
+.category-title-div{
+    width: 50%;
+    margin: auto;
+}
+
+.category-div{
+    display: flex;
+    margin: 20px 120px;
+    gap: 2em;
+}
+
+.category{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 2.7em;
+}
+.category img{
+    width: 90px;
+    height: 90px;
+}
+
+.category button{
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 900px) {
+    .header{
+        flex-direction: column-reverse;
+        padding: 3em 3em;
+    }
+
+    .header-image{
+        width: 90%;
+    }
+
+    .header-content{
+        width: 90%;
+    }
+    .category-div{
+        flex-direction: column;
+        margin: 1.2em 2em;
+    }
 }
