@@ -19,6 +19,10 @@ body{
     background-color: #0D0D0D;
 }
 
+.burger{
+    display: none;
+}
+
 .inner-nav{
     width: 80%;
     height: 100%;
@@ -57,7 +61,7 @@ body{
 }
 
 .nav-button{
-    margin-left: 130px;
+    margin-left: 100px;
     width: 120px;
 }
 
@@ -248,13 +252,29 @@ body{
     outline: none;
     border: none;
     border: 2px solid white;
-    padding: 8px;
+    padding: 8px 0px;
+}
+
+.footer-content-div{
+    display: flex;
+    gap: 2em;
+    padding-bottom: 8em;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer-content{
+    font-size: 0.8em;
 }
 
 @media screen and (max-width: 900px) {
     .header{
         flex-direction: column-reverse;
         padding: 3em 3em;
+    }
+
+    .nav-button, .nav-links-container{
+        display: none;
     }
 
     .header-image{
@@ -312,5 +332,13 @@ body{
 
     .newsletter-subscribe{
         width: 50%;
+    }
+
+    .newsletter-subscribe input, .newsletter-button{
+        font-size: 0.6em;
+    }
+
+    .burger{
+        display: block;
     }
 }
