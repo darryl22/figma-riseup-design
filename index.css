@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -5,13 +9,21 @@ body{
     background-color: #F4F9FF;
 }
 
-.header-button, .category-button, .nav-button, .service-button, .pricing-button, .newsletter-button{
+.blue-button{
     width: 154px;
     padding: 10px 0px;
     color: white;
     background-color: #006EF2;
+    border: 2px solid #006EF2;
     border-radius: 5px;
-    border: none
+    transition: 300ms;
+}
+
+.blue-button:hover{
+    cursor: pointer;
+    color: #006EF2;
+    background-color: white;
+    border: 2px solid #006EF2;
 }
 
 .main-nav{
@@ -30,19 +42,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.logo-container{
-    display: flex;
-    align-items: center;
-    color: #006EF2;
-    font-size: 1.2em;
-}
-
-.logo-container img{
-    height: 40px;
-    width: 40px;
-    margin-right: 7px;
 }
 
 .links-container{
@@ -66,6 +65,14 @@ body{
 }
 
 .header{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 5em 0em;
+}
+
+.header-container{
     background-image: url("./images/background2.svg"), url("./images/background3.svg");
     background-repeat: no-repeat;
     background-position: right bottom, left bottom;
@@ -73,9 +80,7 @@ body{
     aspect-ratio: 1 / 1, 1 / 1;
     background-color: #000005;
     /* aspect-ratio: 16 / 6; */
-    display: flex;
-    align-items: center;
-    padding: 5em 7em;
+    /* padding: 5em 7em; */
 }
 
 .header-content{
@@ -96,7 +101,6 @@ body{
 .header-image{
     background-image: url("./images/background1.svg");
     background-repeat: no-repeat;
-    /* height: 70%; */
     width: 60%;
     aspect-ratio: 5 / 3;
     background-size: cover;
@@ -131,7 +135,14 @@ body{
     background-color: white;
     padding: 2.7em;
     border-radius: 10px;
+    transition: 300ms;
 }
+
+.category:hover, .work-process:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 5px 5px rgb(222, 222, 222);
+}
+
 .category img{
     width: 90px;
     height: 90px;
@@ -257,7 +268,7 @@ body{
     display: flex;
     gap: 2em;
     padding-bottom: 4em;
-    align-items: center;
+    align-items: start;
     justify-content: space-evenly;
 }
 
@@ -285,7 +296,7 @@ body{
     border-top: 2px solid #595959;
 }
 
-.hide, .hide-logo{
+.hide{
     display: none;
 }
 
@@ -296,18 +307,14 @@ body{
 @media screen and (max-width: 900px) {
     .header{
         flex-direction: column-reverse;
-        padding: 3em 3em;
+        padding: 3em 0em;
     }
 
     .nav-button, .nav-links-container{
         display: none;
     }
 
-    .header-image{
-        width: 90%;
-    }
-
-    .header-content{
+    .header-image, .header-content{
         width: 90%;
     }
 
@@ -387,10 +394,6 @@ body{
 
     .hide{
         display: block;
-    }
-
-    .hide-logo{
-        display: flex;
     }
 
     .hide div{
