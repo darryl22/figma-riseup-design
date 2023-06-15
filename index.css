@@ -223,8 +223,6 @@ body{
 .footer{
     background-color: #0D0D0D;
     color: white;
-    padding-left: 7em;
-    padding-right: 7em;
 }
 
 .newsletter{
@@ -258,13 +256,41 @@ body{
 .footer-content-div{
     display: flex;
     gap: 2em;
-    padding-bottom: 8em;
+    padding-bottom: 4em;
     align-items: center;
     justify-content: space-evenly;
 }
 
 .footer-content{
     font-size: 0.8em;
+}
+
+.chat{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding-bottom: 20px;
+}
+
+.footer-inner{
+    padding-left: 7em;
+    padding-right: 7em;
+}
+
+.footer-end{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid #595959;
+}
+
+.hide, .hide-logo{
+    display: none;
+}
+
+.footer-socials{
+    display: none;
 }
 
 @media screen and (max-width: 900px) {
@@ -340,5 +366,50 @@ body{
 
     .burger{
         display: block;
+    }
+
+    .pricing{
+        margin-bottom: 40px;
+    }
+
+    .newsletter{
+        transform: translateX(0px);
+    }
+
+    .footer-inner{
+        padding-left: 0em;
+        padding-right: 0em;
+    }
+
+    .footer-content-div, .chat{
+        display: none;
+    }
+
+    .hide{
+        display: block;
+    }
+
+    .hide-logo{
+        display: flex;
+    }
+
+    .hide div{
+        display: flex;
+        padding: 15px;
+        justify-content: space-between;
+    }
+
+    .footer-end{
+        flex-direction: column;
+        gap: 10px;
+        height: auto;
+        padding-bottom: 30px;
+    }
+
+    .footer-socials{
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        gap: 10px;
     }
 }
