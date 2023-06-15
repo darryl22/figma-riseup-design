@@ -207,6 +207,11 @@ body{
     align-items: center;
     border-radius: 5px;
     background-color: #E3F0FF;
+    transition: 300ms;
+}
+
+.service-checks:hover{
+    transform: translateY(-5px);
 }
 
 .service-checks img{
