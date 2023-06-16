@@ -485,10 +485,26 @@ body{
         display: block;
     }
 
-    .hide div{
+    .link-dropdown{
         display: flex;
         padding: 15px;
         justify-content: space-between;
+        color: white;
+    }
+
+    .dropdown-content{
+        max-height: 0;
+        transition: max-height 300ms;
+        overflow: hidden;
+    }
+
+    .showcontent{
+        max-height: 100%;
+        transition: max-height 300ms;
+    }
+
+    .showcontent-flip{
+        transform: rotate(180deg);
     }
 
     .footer-end{
@@ -504,4 +520,11 @@ body{
         align-items: center; 
         gap: 10px;
     }
+
+    .chat{
+        left: 20px;
+        right: auto;
+        left: 20px;
+    }
+
 }

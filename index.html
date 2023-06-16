@@ -499,18 +499,77 @@
                 </div>
             </div>
 
-            <div class="hide">
+            <div class="hide" style="margin: 2.6em 0em;">
                 <div>
-                    <p style="margin: 0; padding: 0;">Company</p>
-                    <img src="./images/icons/down-arrow.svg" alt="">
+                    <div class="link-dropdown" onclick="show('company')">
+                        <p style="margin: 0; padding: 0;">Company</p>
+                        <img src="./images/icons/down-arrow.svg" alt="" style="transition: 300ms;" id="company-image">
+                    </div>
+                    <div style="display: flex; justify-content: space-between; width: 90%; margin: auto;" class="dropdown-content" id="company">
+                        <div>
+                            <p><a href="#home">Home</a></p>
+                            <p><a href="#aboutus">About Us</a></p>
+                            <p><a href="#portfolios">Portfolios</a></p>
+                            <p><a href="#pricing">Pricing</a></p>
+                            <p><a href="#ourteam">Our Team</a></p>
+                        </div>
+                        <div>
+                            <p><a href="#contactus">Contact Us</a></p>
+                            <p><a href="#helpandsupport">Help & Support</a></p>
+                            <p><a href="#termsandconditions">Terms & Conditions</a></p>
+                            <p><a href="#24/7services">24/7 Services</a></p>
+                            <p><a href="#faqs">FAQ's</a></p>
+                        </div>
+                    </div>
                 </div>
                 <div>
-                    <p style="margin: 0; padding: 0;">Services</p>
-                    <img src="./images/icons/down-arrow.svg" alt="">
+                    <div class="link-dropdown" onclick="show('services')">
+                        <p style="margin: 0; padding: 0;">Services</p>
+                        <img src="./images/icons/down-arrow.svg" alt="" style="transition: 300ms;" id="services-image">
+                    </div>
+                    <div style="margin-left: 20px;" class="dropdown-content" id="services">
+                        <p><a href="#graphicdesign">Graphic Design</a></p>
+                        <p><a href="#uiuxdesign">UI UX Design</a></p>
+                        <p><a href="#webdesign">Web Design</a></p>
+                        <p><a href="#webdevelopment">Web Development</a></p>
+                        <p><a href="#appdevelopment">App Development</a></p>
+                        <p><a href="#webappsecurity">Web Application Security</a></p>
+                    </div>
                 </div>
                 <div>
-                    <p style="margin: 0; padding: 0;">Communication</p>
-                    <img src="./images/icons/down-arrow.svg" alt="">
+                    <div class="link-dropdown" onclick="show('communication')">
+                        <p style="margin: 0; padding: 0;">Communication</p>
+                        <img src="./images/icons/down-arrow.svg" alt="" style="transition: 300ms;" id="communication-image">
+                    </div>
+                    <div class="dropdown-content" id="communication">
+                        <div style="margin: 20px;">
+                            <a href="#phone" style="display: flex; gap: 10px; align-items: center;">
+                                <img src="./images/communication/Phone.svg" alt="Phone">
+                                <div>
+                                    <p style="font-size: 0.9em; margin: 0; padding: 0;">Drop a Line</p>
+                                    <p style="margin-top: 5px; margin-bottom: 0px;">+123 4567 8912</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div style="margin: 20px;">
+                            <a href="#email" style="display: flex; gap: 10px; align-items: center;">
+                                <img src="./images/communication/Email.svg" alt="Email">
+                                <div>
+                                    <p style="font-size: 0.9em; margin: 0; padding: 0;">Email Address</p>
+                                    <p style="margin-top: 5px; margin-bottom: 0px;">hello@riseupspace.com</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div style="margin: 20px;">
+                            <a href="#location" style="display: flex; gap: 10px; align-items: center;">
+                                <img src="./images/communication/Location.svg" alt="Location">
+                                <div>
+                                    <p style="font-size: 0.9em; margin: 0; padding: 0;">Visit Office</p>
+                                    <p style="margin-top: 5px; margin-bottom: 0px;">3600 Chandpur Bangladesh</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
     
@@ -536,3 +595,10 @@
 
 </body>
 </html>
+
+<script defer>
+    function show(name) {
+        document.getElementById(name).classList.toggle("showcontent")
+        document.getElementById(name + "-image").classList.toggle("showcontent-flip")
+    }
+</script>
