@@ -275,6 +275,7 @@ body{
     width: 80%;
     margin: auto;
     transform: translateY(-50%);
+    color: white;
 }
 
 .newsletter-text{
