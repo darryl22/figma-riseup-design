@@ -12,31 +12,25 @@ body{
 .blue-button{
     width: 154px;
     padding: 10px 0px;
+    font-weight: bold;
     color: white;
     background-color: #006EF2;
-    border: 2px solid #006EF2;
     border-radius: 5px;
     transition: 300ms;
+    border: none;
 }
 
 .blue-button:hover{
     cursor: pointer;
-    color: #006EF2;
-    background-color: white;
-    border: 2px solid #006EF2;
-}
-
-.invert{
-    transition: 300ms;
-}
-
-.blue-button:hover .invert{
-    filter: invert(0.5);
+    background-color: #0157c1;
 }
 
 .main-nav{
     width: 100%;
     background-color: #0D0D0D;
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
 .burger{
@@ -61,6 +55,7 @@ body{
     margin: 0px 10px;
     text-decoration: none;
     color: #62687C;
+    font-weight: bold;
 }
 
 .current-link{
@@ -93,6 +88,7 @@ body{
 
 .header-content{
     width: 45%;
+    font-weight: bold;
 }
 
 .header-description{
@@ -104,6 +100,7 @@ body{
     font-family: 'Play', sans-serif;
     font-size: 3em;
     color: white;
+    margin: 10px 0px;
 }
 
 .header-image{
@@ -118,6 +115,7 @@ body{
 .button-container{
     display: flex;
     gap: 1.5em;
+    margin-top: 4em;
 }
 
 .category-title-div{
@@ -127,13 +125,25 @@ body{
 
 .category-div, .work-process-div{
     display: flex;
-    margin: 20px 120px;
+    /* margin: 20px 120px; */
     gap: 2em;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2em;
+}
+
+.work-process-div{
+    margin-bottom: 1.5em;
+}
+
+.category-description, .work-process-description{
+    text-align: center;
+    font-size: 0.8em;
+    color: #838589;
 }
 
 .work-process-div{
     gap: 1.5em;
-    margin: 20px 120px;
 }
 
 .category, .work-process{
@@ -141,7 +151,7 @@ body{
     flex-direction: column;
     align-items: center;
     background-color: white;
-    padding: 2.7em;
+    padding: 2em;
     border-radius: 10px;
     transition: 300ms;
 }
@@ -235,8 +245,17 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 5em 2em;
+    padding: 5em 0em;
     margin-bottom: 13em;
+}
+
+.pricing-title{
+    font-size: 2em; 
+    color: white; 
+    font-family: 'Play', sans-serif; 
+    margin: 0; 
+    text-align: center;
+    font-weight: bold;
 }
 
 .newsletter-button{
@@ -254,9 +273,32 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1em;
     padding: 3.3em;
     border-radius: 10px;
+    width: 80%;
+    margin: auto;
     transform: translateY(-50%);
+}
+
+.newsletter-text{
+    font-weight: 600; 
+    margin: 0; 
+    padding: 0; 
+    margin-bottom: 10px;
+}
+
+.text-one{
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+
+.text-two{
+    font-size: 2.5em;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
 }
 
 .newsletter-subscribe{
@@ -282,7 +324,9 @@ body{
     gap: 2em;
     padding-bottom: 4em;
     align-items: start;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
 }
 
 .footer-content{
@@ -294,11 +338,6 @@ body{
     display: flex;
     justify-content: end;
     padding-bottom: 20px;
-}
-
-.footer-inner{
-    padding-left: 7em;
-    padding-right: 7em;
 }
 
 .footer-end{
@@ -323,6 +362,10 @@ body{
         padding: 3em 0em;
     }
 
+    .header-main-description{
+        font-size: 1.8em;
+    }
+
     .nav-button, .nav-links-container{
         display: none;
     }
@@ -333,15 +376,11 @@ body{
 
     .category-div, .work-process-div{
         flex-direction: column;
-        margin: 1.2em 2em;
+        justify-content: center;
     }
 
     .category-title-div{
         width: 80%;
-    }
-
-    .work-process-div{
-        margin: 1em 1.5em;
     }
 
     .about-us, .services{
@@ -368,20 +407,34 @@ body{
     }
 
     .newsletter{
-        padding: 3.3em 1em;
+        padding: 1.3em;
         border-radius: 0px;
+        width: 100%;
     }
 
-    .newsletter-text{
-        font-size: 0.5em;
+    .text-one{
+        font-size: 0.62em;
+    }
+
+    .text-two{
+        font-size: 0.9em;
     }
 
     .newsletter-subscribe{
-        width: 50%;
+        padding: 4px;
+        border-radius: 5px;
+        min-width: 200px;
     }
 
     .newsletter-subscribe input, .newsletter-button{
         font-size: 0.6em;
+        border-radius: 5px;
+    }
+
+    .pricing{
+        font-size: 0.7em;
+        padding-left: 1.8em;
+        padding-right: 1.8em;
     }
 
     .burger{
