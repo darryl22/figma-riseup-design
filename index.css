@@ -467,7 +467,14 @@ body{
     .burger-links{
         position: fixed;
         background-color: white;
-        transform: translate(-68px, 10px);
+        width: 100px;
+        transform: translate(-76px, 10px);
+        font-size: 0.8em;
+    }
+
+    .burger-links p{
+        text-align: center;
+        margin-top: 4em 0em;
     }
 
     .hide-nav-dropdown{
