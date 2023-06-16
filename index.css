@@ -360,18 +360,24 @@ body{
     .header{
         flex-direction: column-reverse;
         padding: 3em 0em;
+        width: 90%;
+    }
+
+    .header-image{
+        width: 68%;
+        margin-left: 0px;
     }
 
     .header-main-description{
-        font-size: 1.8em;
+        font-size: 1.9em;
     }
 
     .nav-button, .nav-links-container{
         display: none;
     }
 
-    .header-image, .header-content{
-        width: 90%;
+    .header-content{
+        width: 100%;
     }
 
     .category-div, .work-process-div{
