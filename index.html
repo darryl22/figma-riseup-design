@@ -26,7 +26,7 @@
                 </div>
                 <button class="nav-button blue-button">Let's Talk</button>
                 <div class="burger">
-                    <img src="./images/icons/Menu.svg" alt="burger" onclick="showNavDropdown()">
+                    <img src="./images/icons/Menu.svg" alt="burger" onclick="showNavDropdown()" id="burger">
                     <div class="burger-links hide-nav-dropdown" id="burger-dropdown">
                         <p><a href="#Home" class="nav-links">Home</a></p>
                         <p><a href="#Aboutus" class="nav-links">About Us</a></p>
@@ -607,14 +607,21 @@
 </html>
 
 <script defer>
+    let navdrop = document.getElementById("burger-dropdown")
+
     function show(name) {
         document.getElementById(name).classList.toggle("showcontent")
         document.getElementById(name + "-image").classList.toggle("showcontent-flip")
     }
 
     function showNavDropdown() {
-        let navdrop = document.getElementById("burger-dropdown")
         navdrop.classList.toggle("hide-nav-dropdown")
 
+    }
+
+    window.onclick = function(event) {
+        if (!event.target.matches('#burger')){
+            navdrop.classList.add("hide-nav-dropdown")
+        }
     }
 </script>
