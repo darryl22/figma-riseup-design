@@ -464,6 +464,16 @@ body{
         display: block;
     }
 
+    .burger-links{
+        position: fixed;
+        background-color: white;
+        transform: translate(-68px, 10px);
+    }
+
+    .hide-nav-dropdown{
+        display: none;
+    }
+
     .pricing{
         margin-bottom: 40px;
     }
