@@ -264,11 +264,6 @@ body{
     padding: 10px 10px;
 }
 
-.footer{
-    background-color: #0D0D0D;
-    color: white;
-}
-
 .newsletter{
     background-color: #006EF2;
     display: flex;
@@ -320,6 +315,20 @@ body{
     padding: 8px 0px;
 }
 
+.footer{
+    background-color: #0D0D0D;
+    color: white;
+}
+
+.footer a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer a:hover{
+    cursor: pointer;
+}
+
 .footer-content-div{
     display: flex;
     gap: 2em;
@@ -335,10 +344,12 @@ body{
 }
 
 .chat{
-    width: 100%;
-    display: flex;
-    justify-content: end;
-    padding-bottom: 20px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: white;
+    height: fit-content;
+    z-index: 1;
 }
 
 .footer-end{
@@ -346,7 +357,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    border-top: 2px solid #595959;
+    border-top: 1px solid #595959;
 }
 
 .hide{
@@ -405,6 +416,10 @@ body{
         grid-template-columns: auto;
     }
 
+    .service-checks p{
+        font-size: 0.7em;
+    }
+
     .security-service, .reverse{
         flex-direction: column;
     }
@@ -461,7 +476,7 @@ body{
         padding-right: 0em;
     }
 
-    .footer-content-div, .chat{
+    .footer-content-div{
         display: none;
     }
 
