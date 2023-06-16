@@ -348,9 +348,13 @@ body{
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: white;
+    /* background-color: white; */
     height: fit-content;
     z-index: 1;
+}
+
+.chat h2:hover{
+    cursor: pointer;
 }
 
 .footer-end{
@@ -468,13 +472,19 @@ body{
         position: fixed;
         background-color: white;
         width: 100px;
+        border-radius: 5px;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         transform: translate(-76px, 10px);
         font-size: 0.8em;
+        text-align: center;
     }
 
-    .burger-links p{
-        text-align: center;
-        margin-top: 2em 0em;
+    .drop-links{
+        text-decoration: none;
+        color: black;
     }
 
     .hide-nav-dropdown{

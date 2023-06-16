@@ -28,19 +28,20 @@
                 <div class="burger">
                     <img src="./images/icons/Menu.svg" alt="burger" onclick="showNavDropdown()" id="burger">
                     <div class="burger-links hide-nav-dropdown" id="burger-dropdown">
-                        <p><a href="#Home" class="nav-links">Home</a></p>
-                        <p><a href="#Aboutus" class="nav-links">About Us</a></p>
-                        <p><a href="#Services" class="nav-links">Services</a></p>
-                        <p><a href="#Portfolios" class="nav-links">Portfolios</a></p>
-                        <p><a href="#Ourteam" class="nav-links">Our Team</a></p>
-                        <p><a href="#Pricing" class="nav-links">Pricing</a></p>
+                        <p><a href="#Home" class="drop-links">Home</a></p>
+                        <p><a href="#Aboutus" class="drop-links">About Us</a></p>
+                        <p><a href="#Services" class="drop-links">Services</a></p>
+                        <p><a href="#Portfolios" class="drop-links">Portfolios</a></p>
+                        <p><a href="#Ourteam" class="drop-links">Our Team</a></p>
+                        <p><a href="#Pricing" class="drop-links">Pricing</a></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="chat">
-        <div style="display: flex; gap: 15px; padding: 10px;">
+    <div class="chat" id="chat">
+        <h2 style="margin: 0; padding: 0;" onclick="hidechat()">X</h2>
+        <div style="display: flex; gap: 15px; padding: 10px; background-color: white;">
             <p>Live Chat</p>
             <img src="./images/communication/Chat.svg" alt="Chat">
         </div>
@@ -623,5 +624,9 @@
         if (!event.target.matches('#burger')){
             navdrop.classList.add("hide-nav-dropdown")
         }
+    }
+
+    function hidechat() {
+        document.getElementById("chat").style.display = "none"
     }
 </script>
