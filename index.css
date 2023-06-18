@@ -417,6 +417,17 @@ input::placeholder{
     background-color: #006EF2;
 }
 
+.scrollhide{
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1s;
+}
+
+.scrollhide.active{
+    transform: translateY(0);
+    opacity: 1;
+}
+
 @media screen and (max-width: 900px) {
     .header{
         flex-direction: column-reverse;

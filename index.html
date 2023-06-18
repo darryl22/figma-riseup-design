@@ -67,7 +67,7 @@
             <p style="text-align: center; padding-top: 50px; font-size: 2.7em; font-family: 'Play', sans-serif; font-weight: bolder; margin-bottom: 20px;">Our Featured Service Category</p>
             <p style="text-align: center; margin-top: 10px; color: #838589; margin-bottom: 4em;">Welcome to the Riseup Space agency! Our agency is made up of highly skilled and creative professionals who are passionate in their work and dedicated to delivering exceptional results.</p>
         </div>
-        <div class="category-div">
+        <div class="category-div scrollhide">
             <div class="category">
                 <img src="./images/icons/graphicdesign.svg" alt="graphicdesign">
                 <p style="font-weight: bold; font-size: 1.2em; text-align: center; margin-bottom: 0px;">Graphic Design</p>
@@ -109,7 +109,7 @@
         </div>
     </div>
 
-    <div class="about-us" id="Aboutus">
+    <div class="about-us scrollhide" id="Aboutus">
         <img src="./images/about-us-illustration.svg" alt="about us illustration" class="about-us-image">
         <div class="about-us-content">
             <p style="font-weight: bold; color: #006EF2; margin-bottom: 10px;">About Us</p>
@@ -133,7 +133,7 @@
         <p style="font-weight: bold; text-align: center; color: #006EF2; font-size: 2.7em;">Our Services</p>
     </div>
 
-    <div class="services reverse" style="box-shadow: 1px 4px 4px #dfeeff inset">
+    <div class="services reverse scrollhide" style="box-shadow: 1px 4px 4px #dfeeff inset">
         <img src="./images/services/gd-service.svg" alt="graphic design" class="services-image">
         <div class="services-content">
             <p style="font-size: 2em; font-weight: bold;">Graphic Design</p>
@@ -172,7 +172,7 @@
         </div>
     </div>
 
-    <div class="services">
+    <div class="services scrollhide">
         <img src="./images/services/uiux-service.svg" alt="graphic design" class="services-image">
         <div class="services-content">
             <p style="font-size: 2em; font-weight: bold;">UI UX Design</p>
@@ -211,7 +211,7 @@
         </div>
     </div>
 
-    <div class="services reverse">
+    <div class="services reverse scrollhide">
         <img src="./images/services/webdesign-service.svg" alt="graphic design" class="services-image">
         <div class="services-content">
             <p style="font-size: 2em; font-weight: bold;">Web Design</p>
@@ -250,7 +250,7 @@
         </div>
     </div>
 
-    <div class="services">
+    <div class="services scrollhide">
         <img src="./images/services/webdevelopment-service.svg" alt="graphic design" class="services-image">
         <div class="services-content">
             <p style="font-size: 2em; font-weight: bold;">Web Development</p>
@@ -289,7 +289,7 @@
         </div>
     </div>
 
-    <div class="services reverse">
+    <div class="services reverse scrollhide">
         <img src="./images/services/appdevelopment-service.svg" alt="graphic design" class="services-image">
         <div class="services-content">
             <p style="font-size: 2em; font-weight: bold;">App Development</p>
@@ -328,7 +328,7 @@
         </div>
     </div>
 
-    <div class="services">
+    <div class="services scrollhide">
         <img src="./images/services/websecurity-service.svg" alt="graphic design" class="services-image">
         <div class="services-content">
             <p style="font-size: 2em; font-weight: bold;">Web Application Security</p>
@@ -370,7 +370,7 @@
             <p style="text-align: center; padding-top: 50px; font-size: 2.7em; font-family: 'Play', sans-serif; font-weight: bold; margin-bottom: 20px;">Our Work Process</p>
             <p style="text-align: center; margin-top: 10px; color: #838589; margin-bottom: 6em;">Welcome to the Riseup Space agency! Our agency is made up of highly skilled</p>
         </div>
-        <div class="work-process-div">
+        <div class="work-process-div scrollhide">
             <div class="work-process">
                 <img src="./images/workprocess/Meeting.svg" alt="Meeting">
                 <p style="font-size: 1.5em; font-weight: bold; margin: 10px 0px;">Meet</p>
@@ -387,7 +387,7 @@
                 <p class="work-process-description">Welcome to the Riseup Space agency! Our agency is made up of highly skilled and creative professionals who are passionate in their work and dedicated to delivering exceptional results. Welcome to the Riseup Space agency! Our agency is made up of highly skilled and creative professionals who are passionate in their work and dedicated to delivering exceptional results.</p>
             </div>
         </div>
-        <div class="work-process-div">
+        <div class="work-process-div scrollhide">
             <div class="work-process">
                 <img src="./images/workprocess/Work.svg" alt="Works">
                 <p style="font-size: 1.5em; font-weight: bold;">Works</p>
@@ -406,7 +406,7 @@
         </div>
     </div>
 
-    <div class="pricing" id="Pricing">
+    <div class="pricing scrollhide" id="Pricing">
         <p style="color: #006EF2; margin: 0; padding: 0; margin-bottom: 10px; font-weight: bold;">Project Pricing</p>
         <p class="pricing-title">Get Better Solutions For Your Business</p>
         <p style="color: #9A9A9A; text-align: center;">No fake products and services. The customer is king, their lives and needs are the inspiration.</p>
@@ -617,6 +617,25 @@
             currentlink[x].style.color = "#006EF2"
         }
     }
+
+    function reveal() {
+        let scrollhide = document.querySelectorAll(".scrollhide")
+        for (let x = 0; x < scrollhide.length; x++) {
+            let windowheight = window.innerHeight
+            let elementTop = scrollhide[x].getBoundingClientRect().top
+            let visible = 150
+
+            if (elementTop < windowheight - visible) {
+                scrollhide[x].classList.add("active")
+            } else {
+                scrollhide[x].classList.remove("active")
+            }
+        }
+    }
+
+    window.addEventListener("scroll", reveal)
+
+    reveal()
 
     function show(name) {
         document.getElementById(name).classList.toggle("showcontent")
