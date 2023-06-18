@@ -10,8 +10,6 @@ body{
 }
 
 .blue-button{
-    width: 154px;
-    padding: 10px 0px;
     font-weight: bold;
     color: white;
     background-color: #006EF2;
@@ -31,6 +29,7 @@ body{
     position: sticky;
     top: 0;
     z-index: 2;
+    border-bottom: 1px solid #313131;
 }
 
 .burger{
@@ -38,7 +37,7 @@ body{
 }
 
 .inner-nav{
-    width: 80%;
+    width: 84%;
     height: 100%;
     margin: auto;
     display: flex;
@@ -56,6 +55,7 @@ body{
     text-decoration: none;
     color: #62687C;
     font-weight: bold;
+    font-size: 0.9em;
 }
 
 .current-link{
@@ -63,16 +63,16 @@ body{
 }
 
 .nav-button{
-    margin-left: 100px;
-    width: 120px;
+    margin-left: 120px;
+    padding: 0.8em 1.8em;
 }
 
 .header{
     display: flex;
     align-items: center;
-    width: 80%;
+    width: 84%;
     margin: auto;
-    padding: 5em 0em;
+    padding: 6em 0em;
 }
 
 .header-container{
@@ -82,12 +82,10 @@ body{
     background-size: 35%, 35%;
     aspect-ratio: 1 / 1, 1 / 1;
     background-color: #000005;
-    /* aspect-ratio: 16 / 6; */
-    /* padding: 5em 7em; */
 }
 
 .header-content{
-    width: 45%;
+    width: 58%;
     font-weight: bold;
 }
 
@@ -106,16 +104,20 @@ body{
 .header-image{
     background-image: url("./images/background1.svg");
     background-repeat: no-repeat;
-    width: 60%;
     aspect-ratio: 5 / 3;
+    width: 42%;
     background-size: cover;
-    margin-left: 20px;
 }
 
 .button-container{
     display: flex;
     gap: 1.5em;
     margin-top: 4em;
+}
+
+.header-button{
+    padding: 0.75em 2.1em;
+    font-size: 1.1em;
 }
 
 .category-title-div{
@@ -127,9 +129,13 @@ body{
     display: flex;
     /* margin: 20px 120px; */
     gap: 2em;
-    width: 80%;
+    width: 84%;
     margin: auto;
     margin-bottom: 2em;
+}
+
+.category-button{
+    padding: 0.6em 1.8em;
 }
 
 .work-process-div{
@@ -173,6 +179,7 @@ body{
 .about-us, .services{
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 3.9em 0em;
     gap: 5em;
 }
@@ -182,8 +189,8 @@ body{
 }
 
 .about-us-image, .services-image{
-    width: 40%;
-    max-height: 400px;
+    width: 44%;
+    max-height: 500px;
     aspect-ratio: 5 / 3;
 }
 
@@ -196,7 +203,6 @@ body{
     background-image: url("./images/services-bg.svg");
     background-size: cover;
     font-family: 'Play', sans-serif;
-    box-shadow: 0px 4px 5px #006EF2;
     z-index: 2;
 }
 
@@ -236,6 +242,11 @@ body{
     font-size: 0.8em;
 }
 
+.service-button{
+    padding: 12px 34px;
+    margin-top: 1.5em;
+}
+
 .reverse{
     flex-direction: row-reverse;
 }
@@ -252,16 +263,21 @@ body{
 
 .pricing-title{
     font-size: 2em; 
-    color: white; 
+    color: #F0F3FF; 
     font-family: 'Play', sans-serif; 
     margin: 0; 
     text-align: center;
     font-weight: bold;
 }
 
+.pricing-button{
+    font-size: 1.12em;
+    padding: 0.75em 1.3em;
+}
+
 .newsletter-button{
-    width: auto;
     padding: 10px 10px;
+    letter-spacing: 0.9px;
 }
 
 .newsletter{
@@ -286,20 +302,21 @@ body{
 }
 
 .text-one{
-    font-size: 1.5em;
+    font-size: 1.3em;
+    font-weight: 600;
     margin: 0;
     padding: 0;
 }
 
 .text-two{
-    font-size: 2.5em;
+    font-size: 2.3em;
     margin: 0;
     padding: 0;
     margin-top: 10px;
 }
 
 .newsletter-subscribe{
-    background-color: white;
+    background-color: #F0F3FF;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -309,21 +326,25 @@ body{
 }
 
 .newsletter-subscribe input{
+    background-color: #F0F3FF;
     min-width: 10px;
     outline: none;
     border: none;
-    border: 2px solid white;
     padding: 8px 0px;
+}
+
+input::placeholder{
+    font-size: 1.09em;
 }
 
 .footer{
     background-color: #0D0D0D;
-    color: #838589;
+    color: white;
 }
 
 .footer a{
     text-decoration: none;
-    color: #838589;
+    color: white;
 }
 
 .footer a:hover{
@@ -346,8 +367,9 @@ body{
 
 .chat{
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 89px;
+    right: 7em;
+    color: white;
     /* background-color: white; */
     height: fit-content;
     z-index: 1;
@@ -371,6 +393,26 @@ body{
 
 .footer-socials{
     display: none;
+}
+
+.footer-icons{
+    display: flex;
+    gap: 5px;
+}
+
+.icon{
+    width: 29px;
+    height: 29px;
+    background-color: #1C1C1C;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 300ms;
+}
+
+.icon:hover{
+    background-color: #006EF2;
 }
 
 @media screen and (max-width: 900px) {
@@ -440,22 +482,27 @@ body{
     }
 
     .text-one{
-        font-size: 0.62em;
+        font-size: 0.72em;
     }
 
     .text-two{
-        font-size: 0.9em;
+        font-size: 0.87em;
     }
 
     .newsletter-subscribe{
         padding: 4px;
         border-radius: 5px;
-        min-width: 200px;
+        min-width: 189px;
     }
 
     .newsletter-subscribe input, .newsletter-button{
         font-size: 0.6em;
         border-radius: 5px;
+    }
+
+    .newsletter-button{
+        font-size: 0.5em;
+        padding: 7px;
     }
 
     .pricing{
@@ -471,13 +518,14 @@ body{
     .burger-links{
         position: fixed;
         background-color: white;
-        width: 100px;
+        width: 90%;
+        margin: auto;
         border-radius: 5px;
-        height: 250px;
+        /* height: 250px; */
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        transform: translate(-76px, 10px);
+        transform: translate(-90%, 10%);
         font-size: 0.8em;
         text-align: center;
     }
@@ -549,9 +597,6 @@ body{
     }
 
     .chat{
-        left: 20px;
-        right: auto;
-        left: 20px;
+        right: 2em;
     }
-
 }
