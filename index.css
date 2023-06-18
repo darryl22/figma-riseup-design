@@ -64,7 +64,8 @@ body{
 
 .nav-button{
     margin-left: 120px;
-    padding: 0.8em 1.8em;
+    padding: 0.8em 2em;
+    font-size: 0.9em;
 }
 
 .header{
@@ -116,8 +117,9 @@ body{
 }
 
 .header-button{
-    padding: 0.75em 2.1em;
-    font-size: 1.1em;
+    padding: 0.75em 0em;
+    width: 162px;
+    font-size: 1em;
 }
 
 .category-title-div{
@@ -271,8 +273,8 @@ body{
 }
 
 .pricing-button{
-    font-size: 1.12em;
-    padding: 0.75em 1.3em;
+    font-size: 1em;
+    padding: 0.75em 1.1em;
 }
 
 .newsletter-button{
@@ -339,7 +341,7 @@ input::placeholder{
 
 .footer{
     background-color: #0D0D0D;
-    color: white;
+    color: rgba(220, 220, 220, 0.838);
 }
 
 .footer a{
@@ -362,7 +364,7 @@ input::placeholder{
 }
 
 .footer-content{
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 
 .chat{
@@ -370,7 +372,7 @@ input::placeholder{
     bottom: 89px;
     right: 7em;
     color: white;
-    /* background-color: white; */
+    mix-blend-mode: difference;
     height: fit-content;
     z-index: 1;
 }
@@ -428,7 +430,7 @@ input::placeholder{
     }
 
     .header-main-description{
-        font-size: 1.9em;
+        font-size: 1.8em;
     }
 
     .nav-button, .nav-links-container{
@@ -506,9 +508,9 @@ input::placeholder{
     }
 
     .pricing{
-        font-size: 0.7em;
-        padding-left: 1.8em;
-        padding-right: 1.8em;
+        font-size: 0.8em;
+        padding: 2.5em 1.8em;
+        margin-bottom: 40px;
     }
 
     .burger{
@@ -537,10 +539,6 @@ input::placeholder{
 
     .hide-nav-dropdown{
         display: none;
-    }
-
-    .pricing{
-        margin-bottom: 40px;
     }
 
     .newsletter{

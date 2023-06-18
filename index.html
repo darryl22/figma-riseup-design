@@ -19,23 +19,23 @@
 
             <div class="links-container">
                 <div class="nav-links-container">
-                    <a href="#Home" class="nav-links">Home</a>
-                    <a href="#Aboutus" class="nav-links">About Us</a>
-                    <a href="#Services" class="nav-links">Services</a>
-                    <a href="#Portfolios" class="nav-links">Portfolios</a>
-                    <a href="#Ourteam" class="nav-links">Our Team</a>
-                    <a href="#Pricing" class="nav-links">Pricing</a>
+                    <a href="#Home" class="nav-links links">Home</a>
+                    <a href="#Aboutus" class="nav-links links">About Us</a>
+                    <a href="#Services" class="nav-links links">Services</a>
+                    <a href="#Portfolios" class="nav-links links">Portfolios</a>
+                    <a href="#Ourteam" class="nav-links links">Our Team</a>
+                    <a href="#Pricing" class="nav-links links">Pricing</a>
                 </div>
                 <button class="nav-button blue-button">Let's Talk</button>
                 <div class="burger">
                     <img src="./images/icons/Menu.svg" alt="burger" onclick="showNavDropdown()" id="burger">
                     <div class="burger-links hide-nav-dropdown" id="burger-dropdown">
-                        <p><a href="#Home" class="drop-links">Home</a></p>
-                        <p><a href="#Aboutus" class="drop-links">About Us</a></p>
-                        <p><a href="#Services" class="drop-links">Services</a></p>
-                        <p><a href="#Portfolios" class="drop-links">Portfolios</a></p>
-                        <p><a href="#Ourteam" class="drop-links">Our Team</a></p>
-                        <p><a href="#Pricing" class="drop-links">Pricing</a></p>
+                        <p><a href="#Home" class="drop-links links">Home</a></p>
+                        <p><a href="#Aboutus" class="drop-links links">About Us</a></p>
+                        <p><a href="#Services" class="drop-links links">Services</a></p>
+                        <p><a href="#Portfolios" class="drop-links links">Portfolios</a></p>
+                        <p><a href="#Ourteam" class="drop-links links">Our Team</a></p>
+                        <p><a href="#Pricing" class="drop-links links">Pricing</a></p>
                     </div>
                 </div>
             </div>
@@ -43,13 +43,12 @@
     </div>
     <div class="chat" id="chat">
         <div style="display: flex; align-items: center; gap: 15px; padding: 10px;">
-            <h2 style="margin: 0; padding: 0; color: black;" onclick="hidechat()">X</h2>
+            <h2 style="margin: 0; padding: 0;" onclick="hidechat()">X</h2>
             <p>Live Chat</p>
             <img src="./images/communication/Chat.svg" alt="Chat">
         </div>
     </div>
-
-    <div class="header-container">
+    <div class="header-container" id="Home">
         <div class="header">
             <div class="header-content">
                 <p class="header-description">IT Services, Graphic Design, Web Design, Web development, Security Solutions</p>
@@ -110,7 +109,7 @@
         </div>
     </div>
 
-    <div class="about-us">
+    <div class="about-us" id="Aboutus">
         <img src="./images/about-us-illustration.svg" alt="about us illustration" class="about-us-image">
         <div class="about-us-content">
             <p style="font-weight: bold; color: #006EF2; margin-bottom: 10px;">About Us</p>
@@ -130,7 +129,7 @@
         </div>
     </div>
 
-    <div class="our-services">
+    <div class="our-services" id="Services">
         <p style="font-weight: bold; text-align: center; color: #006EF2; font-size: 2.7em;">Our Services</p>
     </div>
 
@@ -366,7 +365,7 @@
         </div>
     </div>
 
-    <div style="background-color: #F7F7F7; display: flex; flex-direction: column; padding-bottom: 8em;">
+    <div style="background-color: #F7F7F7; display: flex; flex-direction: column; padding-bottom: 8em;" id="Ourteam">
         <div class="category-title-div">
             <p style="text-align: center; padding-top: 50px; font-size: 2.7em; font-family: 'Play', sans-serif; font-weight: bold; margin-bottom: 20px;">Our Work Process</p>
             <p style="text-align: center; margin-top: 10px; color: #838589; margin-bottom: 6em;">Welcome to the Riseup Space agency! Our agency is made up of highly skilled</p>
@@ -407,7 +406,7 @@
         </div>
     </div>
 
-    <div class="pricing">
+    <div class="pricing" id="Pricing">
         <p style="color: #006EF2; margin: 0; padding: 0; margin-bottom: 10px; font-weight: bold;">Project Pricing</p>
         <p class="pricing-title">Get Better Solutions For Your Business</p>
         <p style="color: #9A9A9A; text-align: center;">No fake products and services. The customer is king, their lives and needs are the inspiration.</p>
@@ -486,7 +485,7 @@
                         <a href="tel:+123 4567 8912" style="display: flex; gap: 10px; align-items: center;">
                             <img src="./images/communication/Phone.svg" alt="Phone">
                             <div>
-                                <p style="font-size: 0.9em; margin: 0; padding: 0;">Drop a Line</p>
+                                <p style="font-size: 0.8em; margin: 0; padding: 0;">Drop a Line</p>
                                 <p style="margin-top: 5px; margin-bottom: 0px;">+123 4567 8912</p>
                             </div>
                         </a>
@@ -495,7 +494,7 @@
                         <a href="mailto:hello@riseupspace.com" style="display: flex; gap: 10px; align-items: center;">
                             <img src="./images/communication/Email.svg" alt="Email">
                             <div>
-                                <p style="font-size: 0.9em; margin: 0; padding: 0;">Email Address</p>
+                                <p style="font-size: 0.8em; margin: 0; padding: 0;">Email Address</p>
                                 <p style="margin-top: 5px; margin-bottom: 0px;">hello@riseupspace.com</p>
                             </div>
                         </a>
@@ -504,7 +503,7 @@
                         <a href="#location" style="display: flex; gap: 10px; align-items: center;">
                             <img src="./images/communication/Location.svg" alt="Location">
                             <div>
-                                <p style="font-size: 0.9em; margin: 0; padding: 0;">Visit Office</p>
+                                <p style="font-size: 0.8em; margin: 0; padding: 0;">Visit Office</p>
                                 <p style="margin-top: 5px; margin-bottom: 0px;">3600 Chandpur Bangladesh</p>
                             </div>
                         </a>
@@ -611,8 +610,8 @@
 
 <script defer>
     let navdrop = document.getElementById("burger-dropdown")
-    currentlink = document.getElementsByClassName("nav-links")
-    
+    currentlink = document.getElementsByClassName("links")
+
     for (let x = 0; x < currentlink.length; x++) {
         if (window.location.href.includes(currentlink[x].getAttribute("href"))) {
             currentlink[x].style.color = "#006EF2"
