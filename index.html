@@ -43,7 +43,7 @@
     </div>
     <div class="chat" id="chat">
         <div style="display: flex; align-items: center; gap: 15px; padding: 10px;">
-            <h2 style="margin: 0; padding: 0;" onclick="hidechat()">X</h2>
+            <h2 style="margin: 0; padding: 0; color: black;" onclick="hidechat()" id="chatclose">X</h2>
             <p id="chattext">Live Chat</p>
             <img src="./images/communication/Chat.svg" alt="Chat">
         </div>
@@ -631,6 +631,7 @@
     function reveal() {
         let scrollhide = document.querySelectorAll(".scrollhide")
         let chattext = document.getElementById("chattext")
+        let chatclose = document.getElementById("chatclose")
         for (let x = 0; x < scrollhide.length; x++) {
             let windowheight = window.innerHeight
             let elementTop = scrollhide[x].getBoundingClientRect().top
@@ -646,14 +647,18 @@
         if (window.innerWidth > 900) {
             if (document.documentElement.scrollTop > 6800){
                 chattext.style.display = "block"
+                chatclose.style.color = "white"
             } else {
                 chattext.style.display = "none"
+                chatclose.style.color = "black"
             }
         } else {
             if (document.documentElement.scrollTop > 12100) {
                 chattext.style.display = "block"
+                chatclose.style.color = "white"
             } else {
                 chattext.style.display = "none"
+                chatclose.style.color = "black"
             }
         }
         console.log("ran")
