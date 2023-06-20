@@ -44,7 +44,7 @@
     <div class="chat" id="chat">
         <div style="display: flex; align-items: center; gap: 15px; padding: 10px;">
             <h2 style="margin: 0; padding: 0;" onclick="hidechat()">X</h2>
-            <p>Live Chat</p>
+            <p id="chattext">Live Chat</p>
             <img src="./images/communication/Chat.svg" alt="Chat">
         </div>
     </div>
@@ -618,8 +618,19 @@
         }
     }
 
+    const throttle = (fn, delay) => { 
+        let time = Date.now(); 
+        return () => { 
+            if((time + delay - Date.now()) <= 0) { 
+                fn(); 
+                time = Date.now(); 
+            } 
+        } 
+    } 
+
     function reveal() {
         let scrollhide = document.querySelectorAll(".scrollhide")
+        let chattext = document.getElementById("chattext")
         for (let x = 0; x < scrollhide.length; x++) {
             let windowheight = window.innerHeight
             let elementTop = scrollhide[x].getBoundingClientRect().top
@@ -631,9 +642,24 @@
                 scrollhide[x].classList.remove("active")
             }
         }
+
+        if (window.innerWidth > 900) {
+            if (document.documentElement.scrollTop > 6800){
+                chattext.style.display = "block"
+            } else {
+                chattext.style.display = "none"
+            }
+        } else {
+            if (document.documentElement.scrollTop > 12100) {
+                chattext.style.display = "block"
+            } else {
+                chattext.style.display = "none"
+            }
+        }
+        console.log("ran")
     }
 
-    window.addEventListener("scroll", reveal)
+    window.addEventListener("scroll", throttle(reveal, 100))
 
     reveal()
 

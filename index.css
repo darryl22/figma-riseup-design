@@ -372,7 +372,7 @@ input::placeholder{
     bottom: 89px;
     right: 7em;
     color: white;
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
     height: fit-content;
     z-index: 1;
 }
