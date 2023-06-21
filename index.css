@@ -105,7 +105,7 @@ body{
 .header-image{
     background-image: url("./images/background1.svg");
     background-repeat: no-repeat;
-    aspect-ratio: 5 / 3;
+    aspect-ratio: 5 / 3.5;
     width: 42%;
     background-size: cover;
 }
@@ -447,7 +447,7 @@ input::placeholder{
 
     .header-image{
         background-image: url("./images/phonebackground.svg");
-        aspect-ratio: 5 / 2;
+        aspect-ratio: 3.9 / 1.9;
         width: 100%;
         margin-left: 0px;
     }
