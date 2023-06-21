@@ -43,7 +43,6 @@
     </div>
     <div class="chat" id="chat">
         <div style="display: flex; align-items: center; gap: 15px; padding: 10px;">
-            <h2 style="margin: 0; padding: 0; color: black;" onclick="hidechat()" id="chatclose">X</h2>
             <p id="chattext">Live Chat</p>
             <img src="./images/communication/Chat.svg" alt="Chat">
         </div>
@@ -65,7 +64,7 @@
         
         <div style="background-color: #F7F7F7; display: flex; flex-direction: column; padding-bottom: 5em;" class="scrollhide">
             <div class="category-title-div">
-                <p style="text-align: center; padding-top: 50px; font-size: 2.7em; font-family: 'Play', sans-serif; font-weight: bolder; margin-bottom: 20px;">Our Featured Service Category</p>
+                <p class="category-title">Our Featured Service Category</p>
                 <p style="text-align: center; margin-top: 10px; color: #838589; margin-bottom: 4em;">Welcome to the Riseup Space agency! Our agency is made up of highly skilled and creative professionals who are passionate in their work and dedicated to delivering exceptional results.</p>
             </div>
             <div class="category-div scrollhide">
@@ -371,7 +370,7 @@
 
     <div style="background-color: #F7F7F7; display: flex; flex-direction: column; padding-bottom: 8em;" id="Ourteam" class="section">
         <div class="category-title-div">
-            <p style="text-align: center; padding-top: 50px; font-size: 2.7em; font-family: 'Play', sans-serif; font-weight: bold; margin-bottom: 20px;">Our Work Process</p>
+            <p class="work-process-title">Our Work Process</p>
             <p style="text-align: center; margin-top: 10px; color: #838589; margin-bottom: 6em;">Welcome to the Riseup Space agency! Our agency is made up of highly skilled</p>
         </div>
         <div class="work-process-div scrollhide">
@@ -659,7 +658,6 @@
     function reveal() {
         let scrollhide = document.querySelectorAll(".scrollhide")
         let chattext = document.getElementById("chattext")
-        let chatclose = document.getElementById("chatclose")
 
         for (let x = 0; x < scrollhide.length; x++) {
             let windowheight = window.innerHeight
@@ -678,18 +676,14 @@
         if (window.innerWidth > 900) {
             if (document.documentElement.scrollTop > 6800){
                 chattext.style.display = "block"
-                chatclose.style.color = "white"
             } else {
                 chattext.style.display = "none"
-                chatclose.style.color = "black"
             }
         } else {
             if (document.documentElement.scrollTop > 12100) {
                 chattext.style.display = "block"
-                chatclose.style.color = "white"
             } else {
                 chattext.style.display = "none"
-                chatclose.style.color = "black"
             }
         }
     }
@@ -715,7 +709,4 @@
         }
     }
 
-    function hidechat() {
-        document.getElementById("chat").style.display = "none"
-    }
 </script>

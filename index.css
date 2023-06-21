@@ -127,6 +127,15 @@ body{
     margin: auto;
 }
 
+.category-title, .work-process-title{
+    text-align: center; 
+    padding-top: 50px; 
+    font-size: 2.7em; 
+    font-family: 'Play', sans-serif; 
+    font-weight: bold; 
+    margin-bottom: 20px;
+}
+
 .category-div, .work-process-div{
     display: flex;
     /* margin: 20px 120px; */
@@ -475,6 +484,10 @@ input::placeholder{
 
     .category-title-div{
         width: 80%;
+    }
+
+    .category-title, .work-process-title{
+        font-size: 1.8em;
     }
 
     .about-us, .services{
