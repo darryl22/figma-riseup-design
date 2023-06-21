@@ -80,7 +80,7 @@ body{
     background-image: url("./images/background2.svg"), url("./images/background3.svg");
     background-repeat: no-repeat;
     background-position: right bottom, left bottom;
-    background-size: 35%, 35%;
+    background-size: 27%, 27%;
     aspect-ratio: 1 / 1, 1 / 1;
     background-color: #000005;
 }
@@ -166,7 +166,7 @@ body{
 
 .category:hover, .work-process:hover{
     transform: translateY(-10px);
-    box-shadow: 0px 0px 5px 5px rgb(222, 222, 222);
+    box-shadow: 0px 0px 5px 5px rgba(233, 235, 240, 0.81);
 }
 
 .category img{
@@ -186,6 +186,10 @@ body{
     gap: 5em;
 }
 
+.about-us{
+    background-color: white;
+}
+
 .services{
     background-color: #F4F9FF;
 }
@@ -201,7 +205,8 @@ body{
 }
 
 .our-services{
-    padding: 1.7em 0em;
+    font-size: 2.7em;
+    padding: 1.8em 0em;
     background-image: url("./images/services-bg.svg");
     background-size: cover;
     font-family: 'Play', sans-serif;
@@ -280,6 +285,7 @@ body{
 .newsletter-button{
     padding: 10px 10px;
     letter-spacing: 0.9px;
+    border-radius: 7px;
 }
 
 .newsletter{
@@ -323,7 +329,7 @@ body{
     align-items: center;
     justify-content: space-between;
     padding: 9px;
-    border-radius: 10px;
+    border-radius: 7px;
     width: 40%;
 }
 
@@ -369,8 +375,8 @@ input::placeholder{
 
 .chat{
     position: fixed;
-    bottom: 89px;
-    right: 7em;
+    bottom: 2em;
+    right: 2em;
     color: white;
     /* mix-blend-mode: difference; */
     height: fit-content;
@@ -432,12 +438,22 @@ input::placeholder{
     .header{
         flex-direction: column-reverse;
         padding: 3em 0em;
-        width: 90%;
+        width: 100%;
+    }
+    
+    .header-container{
+        background-image: none;
     }
 
     .header-image{
-        width: 68%;
+        background-image: url("./images/phonebackground.svg");
+        aspect-ratio: 5 / 2;
+        width: 100%;
         margin-left: 0px;
+    }
+
+    .header-description{
+        font-size: 0.8em;
     }
 
     .header-main-description{
@@ -449,7 +465,7 @@ input::placeholder{
     }
 
     .header-content{
-        width: 100%;
+        width: 90%;
     }
 
     .category-div, .work-process-div{
@@ -470,6 +486,11 @@ input::placeholder{
 
     .about-us-image, .about-us-content, .services-image, .services-content{
         width: 95%;
+    }
+
+    .our-services{
+        font-size: 1.8em;
+        padding: 1.18em 0em;
     }
 
     .service-checks-div{
@@ -504,13 +525,13 @@ input::placeholder{
 
     .newsletter-subscribe{
         padding: 4px;
-        border-radius: 5px;
+        border-radius: 7px;
         min-width: 189px;
     }
 
     .newsletter-subscribe input, .newsletter-button{
         font-size: 0.6em;
-        border-radius: 5px;
+        border-radius: 7px;
     }
 
     .newsletter-button{
@@ -603,9 +624,5 @@ input::placeholder{
         justify-content: space-between; 
         align-items: center; 
         gap: 10px;
-    }
-
-    .chat{
-        right: 2em;
     }
 }
