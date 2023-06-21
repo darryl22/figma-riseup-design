@@ -384,7 +384,7 @@ input::placeholder{
 
 .chat{
     position: fixed;
-    bottom: 2em;
+    bottom: 3.6em;
     right: 2em;
     color: white;
     /* mix-blend-mode: difference; */
