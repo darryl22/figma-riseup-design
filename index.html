@@ -645,7 +645,6 @@
                 nav.style.color = "#006EF2"
             }
         }
-        console.log("ran highlight")
     }
 
     function reveal() {
@@ -666,6 +665,7 @@
                 scrollhide[x].classList.remove("active")
             }
         }
+        console.log(document.documentElement.scrollTop)
 
         if (window.innerWidth > 900) {
             if (document.documentElement.scrollTop > 6800){
@@ -673,11 +673,17 @@
             } else {
                 chattext.style.display = "none"
             }
-        } else {
+        } else if (window.innerWidth < 900 && window.innerWidth > 610) {
             if (document.documentElement.scrollTop > 12100) {
                 chattext.style.display = "block"
             } else {
                 chattext.style.display = "none"
+            }
+        } else if (window.innerWidth < 610) {
+            if (document.documentElement.scrollTop > 12200) {
+                chat.style.display = "none"
+            } else {
+                chat.style.display = "block"
             }
         }
     }
