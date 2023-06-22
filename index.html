@@ -615,13 +615,6 @@
 
 <script defer>
     let navdrop = document.getElementById("burger-dropdown")
-    // currentlink = document.getElementsByClassName("links")
-
-    // for (let x = 0; x < currentlink.length; x++) {
-    //     if (window.location.href.includes(currentlink[x].getAttribute("href"))) {
-    //         currentlink[x].style.color = "#006EF2"
-    //     }
-    // }
 
     const throttle = (fn, delay) => { 
         let time = Date.now(); 
@@ -658,6 +651,7 @@
     function reveal() {
         let scrollhide = document.querySelectorAll(".scrollhide")
         let chattext = document.getElementById("chattext")
+        let chat = document.getElementById("chat")
 
         for (let x = 0; x < scrollhide.length; x++) {
             let windowheight = window.innerHeight
